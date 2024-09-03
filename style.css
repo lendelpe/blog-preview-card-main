@@ -1,0 +1,114 @@
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --gray-500: hsl(0, 0%, 42%);
+  --gray-950: hsl(0, 0%, 7%);
+
+  --font-family: 'Figtree', sans-serif;
+
+  --fs-body: 16px;
+  --font-weight-regular: 500;
+  --font-weight-bold: 800;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1, h5, a {
+  color: var(--gray-950);
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background-color: var(--yellow);
+  min-height: 100vh;
+  font-family: var(--font-family);
+  color: var(--gray-500);
+  display: grid;
+  place-content: center;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 1rem;
+  margin: 1.5rem;
+  padding: 1.2rem;
+  border: 1px solid var(--gray-950);
+  box-shadow: 8px 8px 0px 0px var(--gray-950);
+}
+
+.card__img img {
+  border-radius: 10px;
+}
+
+.card__content {
+  margin-top: 1.8rem;
+}
+
+.card__label {
+  display: inline-block;
+  padding: .3rem 0.6rem;
+  border-radius: .2rem;
+  background-color: var(--yellow);
+  margin-bottom: .8rem;
+}
+
+.card__date {
+  font-size: 0.8rem;
+  color: var(--gray-950);
+  margin-bottom: 1rem;
+}
+
+.card__title {
+  font-size: 1.4rem;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
+  transition: color .3s;
+}
+
+.card__title:hover {
+  color: var(--yellow);
+}
+
+.card__description {
+  font-size: .9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.profile__name {
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+}
+
+.profile img {
+  width: 40px;
+}
+
+@media screen and (min-width: 375px) {
+  .card {
+    max-width: 375px;
+  }
+
+  .card__title {
+    font-size: 1.5  rem;
+  }
+
+  .card__description {
+    font-size: 1rem;
+  }
+}
